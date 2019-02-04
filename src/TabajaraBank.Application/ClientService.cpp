@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "ClientService.h"
 
-ClientService::ClientService()
+ClientService::ClientService(shared_ptr<IClientRepository> clientRepository) : _clientRepository(clientRepository)
 {
 }
 
@@ -24,9 +24,9 @@ Client ClientService::GetById(int id)
 	return Client();
 }
 
-std::vector<Client> ClientService::GetAll()
+vector<Client> ClientService::GetAll()
 {
-	return std::vector<Client>();
+	return vector<Client>();
 }
 
 bool ClientService::Remove(int clientId)

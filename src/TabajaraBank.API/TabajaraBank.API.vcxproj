@@ -174,6 +174,12 @@
     <ProjectReference Include="..\TabajaraBank.Application\TabajaraBank.Application.vcxproj">
       <Project>{bd18397a-6887-40a0-b687-f36f1996c6d6}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\TabajaraBank.Domain\TabajaraBank.Domain.vcxproj">
+      <Project>{618e2f3c-cae6-49f4-aeff-b19c78ad6fbb}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TabajaraBank.Infra.Data\TabajaraBank.Infra.Data.vcxproj">
+      <Project>{a6f09b1a-56ff-4b04-803b-5f2f6ee3f621}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

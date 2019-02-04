@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{b1ea863a-eae9-4d3d-bef3-86848b132448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Clients">
+      <UniqueIdentifier>{7135965d-e109-4e6e-a4cf-edea58edf3e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -20,6 +26,12 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientRepository.h">
+      <Filter>Features\Clients</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +43,9 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientRepository.cpp">
+      <Filter>Features\Clients</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
