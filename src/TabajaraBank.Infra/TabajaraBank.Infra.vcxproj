@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ClientMapperJson.h" />
+    <ClInclude Include="DBManager.h" />
     <ClInclude Include="Export.h" />
     <ClInclude Include="IClientMapper.h" />
     <ClInclude Include="IMapper.h" />
@@ -156,6 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ClientMapperJson.cpp" />
+    <ClCompile Include="DBManager.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

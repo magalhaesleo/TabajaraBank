@@ -2,11 +2,14 @@
 
 #include "Export.h"
 #include "..\TabajaraBank.Domain\IClientRepository.h"
+#include "..\TabajaraBank.Infra\DBManager.h"
 
 class TABAJARABANKINFRADATA_API ClientRepository : public IClientRepository
 {
+	shared_ptr<DBManager> _dbManager;
+
 public:
-	ClientRepository();
+	ClientRepository(shared_ptr<DBManager> dbManager);
 	~ClientRepository();
 
 	virtual int Add(Client client) override;

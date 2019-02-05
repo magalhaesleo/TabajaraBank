@@ -22,6 +22,9 @@
     <Filter Include="Base">
       <UniqueIdentifier>{ec0d67f1-5435-462d-93d9-cb71f8a504d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SQL">
+      <UniqueIdentifier>{9e8435bf-92bd-4fa7-984d-b90eb1532846}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -42,6 +45,9 @@
     <ClInclude Include="IClientMapper.h">
       <Filter>Features\Clients</Filter>
     </ClInclude>
+    <ClInclude Include="DBManager.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -55,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="ClientMapperJson.cpp">
       <Filter>Features\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="DBManager.cpp">
+      <Filter>SQL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
