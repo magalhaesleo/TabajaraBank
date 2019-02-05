@@ -11,7 +11,7 @@ ClientService::~ClientService()
 
 int ClientService::Add(Client client)
 {
-	return 50;
+	return _clientRepository->Add(client);
 }
 
 bool ClientService::Update(Client client)
@@ -21,7 +21,7 @@ bool ClientService::Update(Client client)
 
 Client ClientService::GetById(int id)
 {
-	return Client();
+	return _clientRepository->GetById(id);
 }
 
 vector<Client> ClientService::GetAll()

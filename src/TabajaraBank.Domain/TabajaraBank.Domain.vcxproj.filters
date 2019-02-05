@@ -39,6 +39,9 @@
     <ClInclude Include="IClientRepository.h">
       <Filter>Features\Clients</Filter>
     </ClInclude>
+    <ClInclude Include="IRepository.h">
+      <Filter>Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

@@ -39,6 +39,9 @@
     <ClInclude Include="IMapper.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="IClientMapper.h">
+      <Filter>Features\Clients</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

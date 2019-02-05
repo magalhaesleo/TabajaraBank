@@ -23,7 +23,10 @@ bool ClientRepository::Update(Client client)
 
 Client ClientRepository::GetById(int id)
 {
-	return Client();
+	Client c;
+	c.Set_Name("Teste");
+
+	return c;
 }
 
 std::vector<Client> ClientRepository::GetAll()

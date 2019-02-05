@@ -6,26 +6,18 @@
 #include "..\TabajaraBank.Domain\IClientRepository.h"
 #include "..\TabajaraBank.Infra.Data\ClientRepository.h"
 #include "..\TabajaraBank.Infra\ClientMapperJson.h"
+#include "ClientResourceAPI.h"
 
 namespace di = boost::di;
 
-class BoostDIContainer
+const auto MakeInjector = []
 {
-public:
-	BoostDIContainer();
-	~BoostDIContainer();
-
-	auto MakeInjector()
-	{
-		auto injector = di::make_injector
-		(
-			di::bind<TabajaraBankAPI>(),
-			di::bind<IClientService>().to<ClientService>(),
-			di::bind<IClientRepository>().to<ClientRepository>(),
-			di::bind<ClientMapperJson>()
-		);
-
-		return injector;
-	}
+	return di::make_injector
+	(
+		di::bind<IClientRepository>().to<ClientRepository>(),
+		di::bind<IClientService>().to<ClientService>(),
+		di::bind<IClientMapper>().to< ClientMapperJson>(),
+		di::bind<IClientResourceAPI>().to<ClientResourceAPI>(),
+		di::bind<TabajaraBankAPI>()
+	);
 };
-

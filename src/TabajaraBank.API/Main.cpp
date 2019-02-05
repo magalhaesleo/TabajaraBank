@@ -2,15 +2,13 @@
 //
 
 #include "pch.h"
-#include "TabajaraBankAPI.h"
 #include "BoostDIContainer.h"
 
 using namespace std;
 
 int main()
 {
-	BoostDIContainer container;
-	auto injector = container.MakeInjector();
+	auto injector = MakeInjector();
 	
 	std::unique_ptr<TabajaraBankAPI> api = injector.create<std::unique_ptr<TabajaraBankAPI>>();
 	api->Initialize();

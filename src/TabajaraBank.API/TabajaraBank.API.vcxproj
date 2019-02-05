@@ -156,11 +156,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BoostDIContainer.h" />
+    <ClInclude Include="ClientResourceAPI.h" />
+    <ClInclude Include="IClientResourceAPI.h" />
+    <ClInclude Include="IResourceAPI.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="TabajaraBankAPI.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BoostDIContainer.cpp" />
+    <ClCompile Include="ClientResourceAPI.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

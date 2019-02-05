@@ -13,22 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="API">
-      <UniqueIdentifier>{3229a32f-93c1-424d-abc5-d8ecd4c3ef68}</UniqueIdentifier>
-    </Filter>
     <Filter Include="IoC">
       <UniqueIdentifier>{90b0126f-479f-4d1c-880d-072e7d94d047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{f80a24c3-05db-498f-bcc3-0c65df7fd3d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\API">
+      <UniqueIdentifier>{f47bc752-27c6-4ca4-98b4-1592922c2923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{509053e0-cabc-4b3a-8459-2b9c7902c45c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Clients">
+      <UniqueIdentifier>{fa6b476b-3225-4d7a-819f-4592f23527ea}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TabajaraBankAPI.h">
-      <Filter>API</Filter>
-    </ClInclude>
     <ClInclude Include="BoostDIContainer.h">
       <Filter>IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IResourceAPI.h">
+      <Filter>Base\API</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientResourceAPI.h">
+      <Filter>Features\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="IClientResourceAPI.h">
+      <Filter>Features\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="TabajaraBankAPI.h">
+      <Filter>Base\API</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -38,11 +56,11 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TabajaraBankAPI.cpp">
-      <Filter>API</Filter>
+    <ClCompile Include="ClientResourceAPI.cpp">
+      <Filter>Features\Clients</Filter>
     </ClCompile>
-    <ClCompile Include="BoostDIContainer.cpp">
-      <Filter>IoC</Filter>
+    <ClCompile Include="TabajaraBankAPI.cpp">
+      <Filter>Base\API</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

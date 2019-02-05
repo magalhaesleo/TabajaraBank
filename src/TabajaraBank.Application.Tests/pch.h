@@ -9,8 +9,7 @@
 #ifndef PCH_H
 #define PCH_H
 
-//#include <iostream>
-//#include <memory>
-//#include <cstdlib>
+#include <memory>
+#include <Windows.h>
 
 #endif //PCH_H

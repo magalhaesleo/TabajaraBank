@@ -1,9 +1,8 @@
 #pragma once
 
-#include "..\TabajaraBank.Domain\Client.h"
-#include "IMapper.h"
+#include "IClientMapper.h"
 
-class TABAJARABANKINFRA_API ClientMapperJson :  public IMapper<Client>
+class TABAJARABANKINFRA_API ClientMapperJson :  public IClientMapper
 {
 public:
 
