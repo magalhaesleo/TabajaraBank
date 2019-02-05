@@ -5,6 +5,7 @@
 #include "..\TabajaraBank.Application\ClientService.h"
 #include "..\TabajaraBank.Domain\IClientRepository.h"
 #include "..\TabajaraBank.Infra.Data\ClientRepository.h"
+#include "..\TabajaraBank.Infra\ClientMapperJson.h"
 
 namespace di = boost::di;
 
@@ -20,7 +21,8 @@ public:
 		(
 			di::bind<TabajaraBankAPI>(),
 			di::bind<IClientService>().to<ClientService>(),
-			di::bind<IClientRepository>().to<ClientRepository>()
+			di::bind<IClientRepository>().to<ClientRepository>(),
+			di::bind<ClientMapperJson>()
 		);
 
 		return injector;

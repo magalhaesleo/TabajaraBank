@@ -13,7 +13,7 @@ ClientRepository::~ClientRepository()
 
 int ClientRepository::Add(Client client)
 {
-	return 0;
+	return 50;
 }
 
 bool ClientRepository::Update(Client client)

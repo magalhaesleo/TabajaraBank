@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{e1db2a2d-e76e-486f-801b-f525a3f5f624}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Clients">
+      <UniqueIdentifier>{e65408c8-cf1e-4ee8-96eb-849ca979f3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{ec0d67f1-5435-462d-93d9-cb71f8a504d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -20,6 +29,15 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientMapperJson.h">
+      <Filter>Features\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="Export.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IMapper.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientMapperJson.cpp">
+      <Filter>Features\Clients</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

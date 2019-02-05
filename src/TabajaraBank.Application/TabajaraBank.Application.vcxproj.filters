@@ -19,6 +19,9 @@
     <Filter Include="Features\Clients">
       <UniqueIdentifier>{8c0d2412-dc7f-4b90-a011-8c1e0b88c253}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{43abecb7-938c-4992-ba51-8dc650a629cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -35,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="ClientService.h">
       <Filter>Features\Clients</Filter>
+    </ClInclude>
+    <ClInclude Include="IService.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

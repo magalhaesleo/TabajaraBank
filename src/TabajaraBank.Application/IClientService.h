@@ -2,14 +2,9 @@
 
 #include "Export.h"
 #include "..\TabajaraBank.Domain\Client.h"
-#include <vector>
+#include "IService.h"
 
-struct TABAJARABANKAPPLICATION_API IClientService
+struct TABAJARABANKAPPLICATION_API IClientService : public IService<Client>
 {
 	virtual ~IClientService() = default;
-	virtual int Add(Client client) = 0;
-	virtual bool Update(Client client) = 0;
-	virtual Client GetById(int id) = 0;
-	virtual std::vector<Client> GetAll() = 0;
-	virtual bool Remove(int clientId) = 0;
 };

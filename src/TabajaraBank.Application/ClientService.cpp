@@ -11,7 +11,7 @@ ClientService::~ClientService()
 
 int ClientService::Add(Client client)
 {
-	return 0;
+	return 50;
 }
 
 bool ClientService::Update(Client client)

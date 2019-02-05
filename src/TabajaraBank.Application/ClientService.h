@@ -10,6 +10,7 @@ class TABAJARABANKAPPLICATION_API ClientService : public IClientService
 {
 	shared_ptr<IClientRepository> _clientRepository;
 public:
+
 	ClientService(shared_ptr<IClientRepository> clientRepository);
 	~ClientService();
 

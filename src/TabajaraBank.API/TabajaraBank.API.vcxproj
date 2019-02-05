@@ -180,6 +180,9 @@
     <ProjectReference Include="..\TabajaraBank.Infra.Data\TabajaraBank.Infra.Data.vcxproj">
       <Project>{a6f09b1a-56ff-4b04-803b-5f2f6ee3f621}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\TabajaraBank.Infra\TabajaraBank.Infra.vcxproj">
+      <Project>{a356cf3f-e461-4e96-8f2f-fc1bc6eefcd3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
