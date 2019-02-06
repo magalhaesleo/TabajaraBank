@@ -1,11 +1,10 @@
 #include "stdafx.h"
 #include "ClientRepository.h"
-
+#include <string>
 
 ClientRepository::ClientRepository(shared_ptr<DBManager> dbManager) :_dbManager(dbManager)
 {
 }
-
 
 ClientRepository::~ClientRepository()
 {
@@ -13,7 +12,7 @@ ClientRepository::~ClientRepository()
 
 int ClientRepository::Add(Client client)
 {
-	std::string sql = "insert into clients (name) values (\"" + client.Name + "\");";
+	std::string sql = "insert into clients (name) values (\"" + client.get_name() + "\");";
 
 	return _dbManager->Insert(sql);
 }
@@ -25,14 +24,9 @@ bool ClientRepository::Update(Client client)
 
 Client ClientRepository::GetById(int id)
 {
-	string sql;
-	//_dbManager->GetById<Client>(sql);
-
-	Client c;
-	c.Name = "Teste";
-
-
-	return c;
+	string sql = "select _id, name from clients where _id=" + to_string(id) + ";";
+	
+	return _dbManager->GetById<Client, int, std::string>(sql);
 }
 
 std::vector<Client> ClientRepository::GetAll()

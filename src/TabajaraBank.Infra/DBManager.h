@@ -4,6 +4,7 @@
 #include<iostream>
 #include <sqlite_modern_cpp.h>
 #include "Export.h"
+#include "Builder.h"
 
 using namespace sqlite;
 using namespace std;
@@ -17,21 +18,23 @@ public:
 	~DBManager();
 	virtual int Insert(string sql);
 	virtual bool Update(string sql);
-	template<typename T>
-	void GetById(string sql);
+	template<typename Target, typename... AttrTypes>
+	Target GetById(string sql);
 	bool Delete(string sql);
 };
 
-template<typename T>
-void DBManager::GetById(string sql)
+template<typename Target, typename... AttrTypes>
+Target DBManager::GetById(string sql)
 {
 	try
 	{
-		ostream output(nullptr);
-		*_database << "select * from clients"
-			>> output;
+		builder<Target, AttrTypes&&...> builder;
+		*_database << sql >> builder;
+
+		return builder.results.front();
 	}
 	catch (const std::exception& ex)
 	{
+		printf("Exception: %s", ex.what());
 	}
 }

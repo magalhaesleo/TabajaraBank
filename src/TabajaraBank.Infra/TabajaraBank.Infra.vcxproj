@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Builder.h" />
     <ClInclude Include="ClientMapperJson.h" />
     <ClInclude Include="DBManager.h" />
     <ClInclude Include="Export.h" />

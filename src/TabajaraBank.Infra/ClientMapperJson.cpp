@@ -4,8 +4,8 @@
 Value ClientMapperJson::Serialize(Client client)
 {
 	Value root;
-	//root["Name"] = client.Get_Name();
-	root["Name"] = client.Name;
+	root["Id"] = client.get_id();
+	root["Name"] = client.get_name();
 
 	return root;
 }
@@ -14,8 +14,8 @@ Client ClientMapperJson::Deserialize(Value input)
 {
 	Client client;
 
-	//client.Set_Name(input["Name"].asString());
-	client.Name = input["Name"].asString();
+	client.set_name(input["Name"].asString());
+	client.set_id(input["Id"].asInt());
 
 	return client;
 }

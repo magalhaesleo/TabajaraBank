@@ -3,11 +3,11 @@
 #include "Export.h"
 #include "..\TabajaraBank.Domain\IClientRepository.h"
 #include "..\TabajaraBank.Infra\DBManager.h"
+#include "..\TabajaraBank.Infra\Builder.h"
 
 class TABAJARABANKINFRADATA_API ClientRepository : public IClientRepository
 {
 	shared_ptr<DBManager> _dbManager;
-	Client ConvertRelationalData();
 public:
 	ClientRepository(shared_ptr<DBManager> dbManager);
 	~ClientRepository();
