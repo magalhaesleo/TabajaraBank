@@ -13,11 +13,9 @@ ClientRepository::~ClientRepository()
 
 int ClientRepository::Add(Client client)
 {
-	std::string sql;
+	std::string sql = "insert into clients (name) values (\"" + client.Name + "\");";
 
-	_dbManager->Insert(sql);
-
-	return 50;
+	return _dbManager->Insert(sql);
 }
 
 bool ClientRepository::Update(Client client)
@@ -27,8 +25,12 @@ bool ClientRepository::Update(Client client)
 
 Client ClientRepository::GetById(int id)
 {
+	string sql;
+	//_dbManager->GetById<Client>(sql);
+
 	Client c;
 	c.Name = "Teste";
+
 
 	return c;
 }

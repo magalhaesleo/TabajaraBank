@@ -18,7 +18,7 @@ protected:
 
 	void SetUp() override
 	{
-		 _clientService = shared_ptr<IClientService>(new ClientService(_clientRepositoryMock.get()));
+		 _clientService = shared_ptr<IClientService>(new ClientService(shared_ptr<IClientRepository>(&_clientRepositoryMock.get())));
 	}
 };
 

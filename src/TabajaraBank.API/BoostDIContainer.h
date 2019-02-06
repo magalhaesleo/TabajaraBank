@@ -8,6 +8,7 @@
 #include "..\TabajaraBank.Infra\ClientMapperJson.h"
 #include "ClientResourceAPI.h"
 #include "..\TabajaraBank.Infra\DBManager.h"
+#include "sqlite_modern_cpp.h"
 
 namespace di = boost::di;
 
@@ -20,6 +21,7 @@ const auto MakeInjector = []
 		di::bind<IClientMapper>().to< ClientMapperJson>(),
 		di::bind<IClientResourceAPI>().to<ClientResourceAPI>(),
 		di::bind<TabajaraBankAPI>(),
-		di::bind<DBManager>()
+		di::bind<DBManager>(),
+		di::bind<database>().to(new database("dbfile.db"))
 	);
 };

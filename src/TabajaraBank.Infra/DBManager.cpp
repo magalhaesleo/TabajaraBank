@@ -2,9 +2,9 @@
 #include "DBManager.h"
 
 
-DBManager::DBManager()
+DBManager::DBManager(shared_ptr<database> database):_database(database)
 {
-	_database = shared_ptr<database>(new database("dbfile.db"));
+	//_database = shared_ptr<database>(new database("dbfile.db"));
 	this->CreateDataBase();
 }
 
@@ -12,16 +12,28 @@ DBManager::~DBManager()
 {
 }
 
-void DBManager::Insert(string sql)
+int DBManager::Insert(string sql)
 {
 	try
 	{
 		*_database << sql;
+
+		return _database->last_insert_rowid();
 	}
-	catch (const std::exception&)
+	catch (const std::exception& ex)
 	{
-	
+		printf("exception: %s", ex.what());
 	}
+}
+
+bool DBManager::Update(string sql)
+{
+	return false;
+}
+
+bool DBManager::Delete(string sql)
+{
+	return false;
 }
 
 void DBManager::CreateDataBase()
@@ -33,13 +45,10 @@ void DBManager::CreateDataBase()
 			"   _id integer primary key autoincrement not null,"
 			"   name text"
 			");";
-
-		*_database <<
-			"insert into clients (age) values (?)"
-			<< "teste";
 	}
-	catch (const std::exception&)
+	catch (const std::exception& ex)
 	{
 
 	}
 }
+
