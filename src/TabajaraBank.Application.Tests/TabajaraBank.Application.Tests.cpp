@@ -18,6 +18,7 @@ protected:
 
 	void SetUp() override
 	{
+		Fake(Dtor(_clientRepositoryMock));
 		 _clientService = shared_ptr<IClientService>(new ClientService(shared_ptr<IClientRepository>(&_clientRepositoryMock.get())));
 	}
 };
@@ -25,13 +26,13 @@ protected:
 TEST_F(Application_Client_Service, Add_Client_Should_Be_Ok)
 {
 	When(Method(_clientRepositoryMock, Add)).Return(1);
-	Client client;
+	Mock<Client> client;
 
-	int result = _clientService->Add(client);
+	int result = _clientService->Add(client.get());
 	int idExpected = 1;
 
 	ASSERT_EQ(result, idExpected);
-	Verify(Method(_clientRepositoryMock, Add)).AtLeast(1);
+	Verify(Method(_clientRepositoryMock, Add).Using(Any<Client>())).AtLeast(1);
 	VerifyNoOtherInvocations(_clientRepositoryMock);
 }
 

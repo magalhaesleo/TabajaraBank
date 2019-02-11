@@ -15,10 +15,10 @@ public:
 	Client(int id, string name);
 	~Client();
 
-	string get_name() { return this->_name; }
-	void set_name(string name) { this->_name = name; }
+	virtual string get_name() { return this->_name; }
+	virtual void set_name(string name) { this->_name = name; }
 
-	int get_id() { return this->_id; }
-	void set_id(int id) { this->_id = id; }
+	virtual int get_id() { return this->_id; }
+	virtual void set_id(int id) { this->_id = id; }
 };
 
