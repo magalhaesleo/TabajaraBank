@@ -25,11 +25,11 @@ protected:
 
 TEST_F(Application_Client_Service, Add_Client_Should_Be_Ok)
 {
-	When(Method(_clientRepositoryMock, Add)).Return(1);
+	int idExpected = 1;
+	When(Method(_clientRepositoryMock, Add)).Return(idExpected);
 	Mock<Client> client;
 
 	int result = _clientService->Add(client.get());
-	int idExpected = 1;
 
 	ASSERT_EQ(result, idExpected);
 	Verify(Method(_clientRepositoryMock, Add).Using(Any<Client>())).AtLeast(1);
