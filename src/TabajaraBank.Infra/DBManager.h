@@ -15,7 +15,7 @@ class TABAJARABANKINFRA_API DBManager
 	void CreateDataBase();
 public:
 	DBManager(shared_ptr<database> database);
-	~DBManager();
+	virtual ~DBManager();
 	virtual int Insert(string sql);
 	virtual bool Update(string sql);
 	template<typename Target, typename... AttrTypes>

@@ -14,8 +14,8 @@ public:
 	ClientService(shared_ptr<IClientRepository> clientRepository);
 	~ClientService();
 
-	virtual int Add(Client client) override;
-	virtual bool Update(Client client) override;
+	virtual int Add(Client& client) override;
+	virtual bool Update(Client& client) override;
 	virtual Client GetById(int id) override;
 	virtual vector<Client> GetAll() override;
 	virtual bool Remove(int clientId) override;

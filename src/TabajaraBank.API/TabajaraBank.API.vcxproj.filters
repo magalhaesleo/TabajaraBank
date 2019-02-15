@@ -48,6 +48,9 @@
     <ClInclude Include="TabajaraBankAPI.h">
       <Filter>Base\API</Filter>
     </ClInclude>
+    <ClInclude Include="Export.h">
+      <Filter>Base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

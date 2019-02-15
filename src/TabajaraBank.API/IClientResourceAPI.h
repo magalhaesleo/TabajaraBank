@@ -1,7 +1,8 @@
 #pragma once
 #include "IResourceAPI.h"
 
-struct IClientResourceAPI : public IResourceAPI 
+
+struct TABAJARABANKAPI_API IClientResourceAPI : public IResourceAPI
 {
 	virtual ~IClientResourceAPI() = default;
 };

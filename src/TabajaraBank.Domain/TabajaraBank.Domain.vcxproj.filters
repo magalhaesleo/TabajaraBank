@@ -42,6 +42,9 @@
     <ClInclude Include="IRepository.h">
       <Filter>Base</Filter>
     </ClInclude>
+    <ClInclude Include="ShortNameException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -58,6 +61,9 @@
     </ClCompile>
     <ClCompile Include="IClientRepository.cpp">
       <Filter>Features\Clients</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortNameException.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

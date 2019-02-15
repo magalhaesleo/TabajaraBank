@@ -51,6 +51,9 @@
     <ClInclude Include="Builder.h">
       <Filter>SQL</Filter>
     </ClInclude>
+    <ClInclude Include="IDBManager.h">
+      <Filter>SQL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

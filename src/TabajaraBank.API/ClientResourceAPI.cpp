@@ -5,6 +5,10 @@ ClientResourceAPI::ClientResourceAPI(shared_ptr<IClientService> clientService, s
 {
 }
 
+ClientResourceAPI::~ClientResourceAPI()
+{
+}
+
 void ClientResourceAPI::Post(const shared_ptr<Session> session)
 {
 	const auto request = session->get_request();

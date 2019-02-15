@@ -9,27 +9,37 @@ ClientService::~ClientService()
 {
 }
 
-int ClientService::Add(Client client)
+int ClientService::Add(Client& client)
 {
+	client.Validate();
 	return _clientRepository->Add(client);
 }
 
-bool ClientService::Update(Client client)
+bool ClientService::Update(Client& client)
 {
-	return false;
+	client.Validate();
+	return _clientRepository->Update(client);
 }
 
 Client ClientService::GetById(int id)
 {
-	return _clientRepository->GetById(id);
+	if (id > 0)
+	{
+		return _clientRepository->GetById(id);
+	}
+	else
+		throw exception();
 }
 
 vector<Client> ClientService::GetAll()
 {
-	return vector<Client>();
+	return _clientRepository->GetAll();
 }
 
 bool ClientService::Remove(int clientId)
 {
-	return false;
+	if (clientId < 1)
+		return false;
+
+	return _clientRepository->Remove(clientId);
 }

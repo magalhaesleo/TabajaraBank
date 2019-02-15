@@ -1,11 +1,12 @@
 #pragma once
 #include <memory>
 #include "corvusoft\restbed.hpp"
+#include "Export.h"
 
 using namespace std;
 using namespace restbed;
 
-struct IResourceAPI
+struct TABAJARABANKAPI_API IResourceAPI
 {
 	virtual ~IResourceAPI() = default;
 	virtual void Post(const shared_ptr< Session > session) = 0;

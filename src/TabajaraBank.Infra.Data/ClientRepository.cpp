@@ -26,7 +26,7 @@ Client ClientRepository::GetById(int id)
 {
 	string sql = "select _id, name from clients where _id=" + to_string(id) + ";";
 	
-	return _dbManager->GetById<Client, int, std::string>(sql);
+	return _dbManager->GetById<Client, int, std::string, std::string, std::string, std::string>(sql);
 }
 
 std::vector<Client> ClientRepository::GetAll()

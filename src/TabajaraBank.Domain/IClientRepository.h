@@ -5,5 +5,5 @@
 
 struct TABAJARABANKDOMAIN_API IClientRepository : public IRepository<Client>
 {
-	virtual ~IClientRepository() = default;
+	virtual ~IClientRepository();
 };

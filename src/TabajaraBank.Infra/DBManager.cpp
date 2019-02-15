@@ -4,7 +4,6 @@
 
 DBManager::DBManager(shared_ptr<database> database):_database(database)
 {
-	//_database = shared_ptr<database>(new database("dbfile.db"));
 	this->CreateDataBase();
 }
 
